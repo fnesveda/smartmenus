@@ -483,6 +483,9 @@
 					e.stopPropagation();
 					return false;
 				}
+				if ($a.hasClass('disabled')) {
+					return false;
+				}
 				if (this.$root.triggerHandler('click.smapi', $a[0]) === false) {
 					return false;
 				}
